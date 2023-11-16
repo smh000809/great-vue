@@ -1,0 +1,14 @@
+{
+  "name": "languages",
+  "version": "1.0.0",
+  "description": "翻译服务",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "translate": "node ./index.js && translate"
+  },
+  "author": "江苏数字产权交易有限公司(Jiangsu Digital Property Exchange Co., Ltd.)",
+  "dependencies": {
+    "language-translate": "^2.2.3"
+  }
+}
