@@ -10,6 +10,9 @@ import legacy from '@vitejs/plugin-legacy'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import PackageJSON from './package.json'
 import postcssPresetEnv from 'postcss-preset-env'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import {AntDesignVueResolver} from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}: ConfigEnv) => {
@@ -33,6 +36,24 @@ export default defineConfig(({mode}: ConfigEnv) => {
       basicSsl(),
       legacy({
         targets: PackageJSON.browserslist,
+      }),
+      AutoImport({
+        imports: ['vue', '@vueuse/core', '@vueuse/math', 'pinia', 'vue-router', 'vue-i18n', 'vitest'],
+        resolvers: [AntDesignVueResolver({importStyle: false})],
+        dts: fileURLToPath(new URL('./src/types/auto-imports.d.ts', import.meta.url)),
+        vueTemplate: true,
+        eslintrc: {
+          enabled: true,
+          filepath: fileURLToPath(new URL('./src/types/.eslintrc-auto-import.json', import.meta.url)),
+          globalsPropValue: true,
+        },
+        dirs: [],
+      }),
+      Components({
+        directives: true,
+        resolvers: [AntDesignVueResolver({importStyle: false})],
+        dts: fileURLToPath(new URL('./src/types/components.d.ts', import.meta.url)),
+        dirs: [],
       }),
     ],
     resolve: {

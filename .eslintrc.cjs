@@ -10,6 +10,7 @@ module.exports = defineConfig({
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
+    './src/types/.eslintrc-auto-import.json',
     '@unocss',
   ],
   overrides: [

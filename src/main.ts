@@ -1,3 +1,4 @@
+import '@unocss/reset/eric-meyer.css'
 import {createApp} from 'vue'
 import {createPinia} from 'pinia'
 
