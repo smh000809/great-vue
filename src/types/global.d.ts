@@ -7,14 +7,14 @@ import {UnwrapRef} from 'vue'
 declare module 'vue' {
   export interface GlobalComponents {
     AFlex: (typeof import('ant-design-vue/es'))['Flex']
-    // FloatingTool: (typeof import('../components/FloatingTool/index.vue'))['default']
+    HelloWorld: (typeof import('../components/HelloWorld/index.vue'))['default']
   }
   export interface ComponentCustomProperties {
-    // readonly FormInstance: UnwrapRef<(typeof import('element-plus'))['FormInstance']>
+    HelloWorld: (typeof import('../components/HelloWorld/index.vue'))['default']
   }
 }
 declare module '@vue/runtime-core' {
   export interface ComponentCustomProperties {
-    // readonly FormInstance: UnwrapRef<(typeof import('element-plus'))['FormInstance']>
+    HelloWorld: (typeof import('../components/HelloWorld/index.vue'))['default']
   }
 }
