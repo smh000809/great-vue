@@ -7,14 +7,13 @@ const config = {
       excludeFiles: [],
       options: {
         trailingComma: 'none',
-        singleAttributePerLine: true,
+        singleAttributePerLine: false,
         parser: 'vue',
       },
     },
     {
       files: ['./src/utils/RegExp.ts'],
       options: {
-        singleAttributePerLine: true,
         printWidth: 1000,
       },
     },
@@ -22,7 +21,7 @@ const config = {
   semi: false,
   singleQuote: true,
   tabWidth: 2,
-  printWidth: 120,
+  printWidth: 180,
   bracketSpacing: false,
   useTabs: false,
 }

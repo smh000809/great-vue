@@ -33,3 +33,5 @@ coverage
 !.vscode/i18n-ally-reviews.yml
 !.vscode/launch.json
 !.vscode/tasks.json
+
+packages/count-icons/output-count_icons.txt

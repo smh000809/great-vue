@@ -31,14 +31,8 @@ export default defineConfig({
      * wh-16px => width: 16px; height: 16px;
      */
     [/^wh-(\d+)(px|%)$/, ([, c1, c2]) => `w-${c1}${c2} h-${c1}${c2}`],
-    [
-      /^flex_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/,
-      ([, s1, s2]) => `flex items-${s1} justify-${s2}`,
-    ],
-    [
-      /^flex_col_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/,
-      ([, s1, s2]) => `flex flex-col items-${s1} justify-${s2}`,
-    ],
+    [/^flex_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex items-${s1} justify-${s2}`],
+    [/^flex_col_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex flex-col items-${s1} justify-${s2}`],
     /**
      * l-h-0px => line-height: 0px; height: 0px;
      * l-h-16px => line-height: 16px; height: 16px;
@@ -62,7 +56,7 @@ export default defineConfig({
       prefix: 'i-',
       extraProperties: {
         display: 'inline-block',
-        'vertical-align': 'middle',
+        'vertical-align': '-0.125em',
         'font-size': '16px',
       },
       warn: true,
