@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import {App} from 'ant-design-vue'
+import {theme} from '@/styles/theme'
 console.log(import.meta.env)
 </script>
 
 <template>
-  <AWatermark :content="['Ant Design Vue', 'Happy Working']">
-    <div class="h-500px" />
-  </AWatermark>
+  <AConfigProvider :theme="theme()">
+    <App>
+      <RouterView></RouterView>
+    </App>
+  </AConfigProvider>
 </template>
