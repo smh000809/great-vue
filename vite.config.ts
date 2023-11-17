@@ -93,6 +93,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
     server: {
       open: true,
       cors: true,
+      host: true,
       port: 8001,
     },
     build: {
