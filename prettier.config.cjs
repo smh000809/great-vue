@@ -24,5 +24,6 @@ const config = {
   printWidth: 180,
   bracketSpacing: false,
   useTabs: false,
+  arrowParens: 'avoid',
 }
 module.exports = config
