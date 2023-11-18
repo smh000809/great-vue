@@ -17,7 +17,7 @@ import 'virtual:unocss-devtools'
 
 const pinia = createPinia().use(
   createPersistedState({
-    key: (id) => `__APP__PERSISTED__${id}__`.toUpperCase(),
+    key: (id: string) => `__APP__PERSISTED__${id}__`.toUpperCase(),
     debug: true,
     serializer: serializer(),
   }),
