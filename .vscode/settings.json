@@ -18,12 +18,18 @@
   },
   // 控制列表和树是否具有平滑滚动效果。
   "workbench.list.smoothScrolling": true,
+  // material-icon 插件配置
+  "material-icon-theme.activeIconPack": "vue",
+  // 控制命令面板是否应包含常用命令的列表。
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  // 指定工作台中使用的文件图标主题；若指定为 "null"，则不显示任何文件图标。
+  "workbench.iconTheme": "material-icon-theme",
   // 控制是否启用平滑插入动画。
   "editor.cursorSmoothCaretAnimation": "on",
   // 控制字体
-  "editor.fontFamily": "FiraCode-Retina, JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Monaspace Neon', Menlo, Monaco, 'Courier New', monospace",
   // 字体连字
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
   // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
   // 控制编辑器是否已启用链接编辑。相关符号(如 HTML 标记)将在编辑时进行更新，具体取决于语言。

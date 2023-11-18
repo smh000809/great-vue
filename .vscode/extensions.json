@@ -1,19 +1,19 @@
 {
   "recommendations": [
-    "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
     "eamodio.gitlens",
     "christian-kohler.npm-intellisense",
     "stylelint.vscode-stylelint",
-    "vscode-icons-team.vscode-icons",
     "lihuiwang.vue-alias-skip",
     "stxr.iconfont-preview",
     "lokalise.i18n-ally",
     "antfu.unocss",
-    "antfu.iconify"
+    "antfu.iconify",
+    "pflannery.vscode-versionlens"
   ],
   "unwantedRecommendations": ["octref.vetur"]
 }
