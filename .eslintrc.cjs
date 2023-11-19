@@ -11,6 +11,7 @@ module.exports = defineConfig({
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
     './src/types/.eslintrc-auto-import.json',
+    './src/types/.eslintrc-globals.json',
     '@unocss',
   ],
   overrides: [

@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import {App} from 'ant-design-vue'
 import {theme} from '@/styles/theme'
-console.log(import.meta.env)
 </script>
 
 <template>
   <AConfigProvider :theme="theme()">
-    <App>
+    <AApp>
       <RouterView></RouterView>
-    </App>
+    </AApp>
   </AConfigProvider>
 </template>
