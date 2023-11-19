@@ -7,7 +7,7 @@ import NavBar from './NavBar.vue'
 </script>
 
 <template>
-  <ALayout class="min-w-1160px">
+  <ALayout class="min-w-1160px pb-1px">
     <ALayoutHeader class="!h-65px !p-0">
       <Header></Header>
     </ALayoutHeader>
