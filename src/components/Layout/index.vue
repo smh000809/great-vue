@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Header from './Header.vue'
-import Sider from './Sider.vue'
-import Footer from './Footer.vue'
-import Content from './Content.vue'
-import NavBar from './NavBar.vue'
+import Header from './Header/index.vue'
+import Sider from './Sider/index.vue'
+import Footer from './Footer/index.vue'
+import Content from './Content/index.vue'
 </script>
 
 <template>
@@ -17,7 +16,6 @@ import NavBar from './NavBar.vue'
       </ALayoutSider>
       <ADivider type="vertical" class="m-0 ms-0 h-full" />
       <ALayoutContent>
-        <NavBar></NavBar>
         <Content></Content>
       </ALayoutContent>
     </ALayout>

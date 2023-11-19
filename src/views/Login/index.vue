@@ -1,3 +1,3 @@
 <script setup lang="ts"></script>
 
-<template>HomeView</template>
+<template>Login</template>

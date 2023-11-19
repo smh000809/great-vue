@@ -30,7 +30,7 @@ export default defineConfig({
      * wh-0px => width: 0px; height: 0px;
      * wh-16px => width: 16px; height: 16px;
      */
-    [/^wh-(\d+)(px|%)$/, ([, c1, c2]) => `w-${c1}${c2} h-${c1}${c2}`],
+    [/^wh-(\d+)(px|%|vh)$/, ([, c1, c2]) => `w-${c1}${c2} h-${c1}${c2}`],
     [/^flex_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex items-${s1} justify-${s2}`],
     [/^flex_col_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex flex-col items-${s1} justify-${s2}`],
     /**
@@ -43,11 +43,11 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: '#40b159',
-      disabled: '#858b9c',
-      danger: '#f56c6c',
-      warning: '#e6a23c',
-      info: '#909399',
+      primary: '#cbb363',
+      success: '#52c41a',
+      warning: '#faad14',
+      danger: '#ff4d4f',
+      info: '#1677ff',
     },
   },
   presets: [
