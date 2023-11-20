@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
+    "ms-playwright.playwright",
     "eamodio.gitlens",
     "christian-kohler.npm-intellisense",
     "stylelint.vscode-stylelint",

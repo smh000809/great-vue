@@ -33,7 +33,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
       vue(), //
       vueJsx(),
       UnoCSS(),
-      basicSsl(),
+      // basicSsl(),
       legacy({
         targets: PackageJSON.browserslist,
       }),
@@ -94,7 +94,6 @@ export default defineConfig(({mode}: ConfigEnv) => {
       open: true,
       cors: true,
       host: true,
-      port: 8001,
     },
     build: {
       chunkSizeWarningLimit: 2000,
@@ -109,7 +108,6 @@ export default defineConfig(({mode}: ConfigEnv) => {
       // },
     },
     preview: {
-      port: 8000,
       open: true,
     },
   }
