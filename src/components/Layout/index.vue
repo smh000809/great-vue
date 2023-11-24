@@ -19,7 +19,7 @@ import Content from './Content/index.vue'
         <Content></Content>
       </ALayoutContent>
     </ALayout>
-    <ALayoutFooter class="llh-45px !p-0">
+    <ALayoutFooter class="lhh-45px !p-0">
       <Footer></Footer>
     </ALayoutFooter>
   </ALayout>

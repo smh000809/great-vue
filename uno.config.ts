@@ -34,12 +34,12 @@ export default defineConfig({
     [/^flex_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex items-${s1} justify-${s2}`],
     [/^flex_col_(center|start|end|stretch|baseline)_(center|start|end|between|around|evenly)$/, ([, s1, s2]) => `flex flex-col items-${s1} justify-${s2}`],
     /**
-     * llh-0px => line-height: 0px; height: 0px;
-     * llh-16px => line-height: 16px; height: 16px;
-     * llh-24px => line-height: 24px; height: 24px;
-     * llh-32px => line-height: 32px; height: 32px;
+     * lhh-0px => line-height: 0px; height: 0px;
+     * lhh-16px => line-height: 16px; height: 16px;
+     * lhh-24px => line-height: 24px; height: 24px;
+     * lhh-32px => line-height: 32px; height: 32px;
      */
-    [/^llh-(\d+)px$/, ([, s]) => `h-${s}px leading-${s}px`],
+    [/^lhh-(\d+)px$/, ([, s]) => `h-${s}px leading-${s}px`],
   ],
   theme: {
     colors: {
