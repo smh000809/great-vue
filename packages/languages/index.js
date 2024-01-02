@@ -17,7 +17,7 @@ Object.entries(zhCN).forEach(([key, value]) => {
   const match = String(value).match(/\{.*?\}/g)
   let value_ = String(value)
   if (!match) return
-  match.forEach((item) => {
+  match.forEach(item => {
     value_ = value_.replace(item, `{{${item.slice(1, -1)}}}`)
   })
   log(`${key}: value-->`, value_)
@@ -29,6 +29,6 @@ Object.entries(zhCN).forEach(([key, value]) => {
 writeFileSync(translateEntryJsonPath, JSON.stringify(zhCNObj))
 
 // 删除 ./languages/locales 下所有文件
-readdirSync(languagesLocalesPath).forEach((file) => {
+readdirSync(languagesLocalesPath).forEach(file => {
   unlinkSync(`${languagesLocalesPath}/${file}`)
 })

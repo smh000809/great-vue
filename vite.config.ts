@@ -1,22 +1,23 @@
 /// <reference types="vitest" />
 import {fileURLToPath, URL} from 'node:url'
-
+/** @type {import('vite').UserConfig} */
 import {defineConfig, ConfigEnv, loadEnv} from 'vite'
 import {configDefaults} from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
 import legacy from '@vitejs/plugin-legacy'
-import basicSsl from '@vitejs/plugin-basic-ssl'
+// import basicSsl from '@vitejs/plugin-basic-ssl'
 import PackageJSON from './package.json'
 import postcssPresetEnv from 'postcss-preset-env'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {AntDesignVueResolver} from 'unplugin-vue-components/resolvers'
+import TurboConsole from 'unplugin-turbo-console/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}: ConfigEnv) => {
-  const env = loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, process.cwd(), 'VITE_APP')
   console.log(`defineConfig ~ env:`, env)
 
   return {
@@ -33,6 +34,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
       vue(), //
       vueJsx(),
       UnoCSS(),
+      // https 模式
       // basicSsl(),
       legacy({
         targets: PackageJSON.browserslist,
@@ -55,6 +57,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
         dts: fileURLToPath(new URL('./src/types/components.d.ts', import.meta.url)),
         dirs: [],
       }),
+      TurboConsole(),
     ],
     resolve: {
       alias: {

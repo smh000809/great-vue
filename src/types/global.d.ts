@@ -1,6 +1,7 @@
 export {}
 declare global {
   export type {} from 'ant-design-vue'
+  import('ant-design-vue')
   interface Window {}
 }
 import {UnwrapRef} from 'vue'
