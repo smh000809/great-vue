@@ -3,6 +3,7 @@ import Header from './Header/index.vue'
 import Sider from './Sider/index.vue'
 import Footer from './Footer/index.vue'
 import Content from './Content/index.vue'
+defineOptions({name: 'Layout'})
 </script>
 
 <template>

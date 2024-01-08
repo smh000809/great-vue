@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {AntDesignVueResolver} from 'unplugin-vue-components/resolvers'
 import TurboConsole from 'unplugin-turbo-console/vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}: ConfigEnv) => {
@@ -33,6 +34,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
     plugins: [
       vue(), //
       vueJsx(),
+      VueDevTools(),
       UnoCSS(),
       // https 模式
       // basicSsl(),

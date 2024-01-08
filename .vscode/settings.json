@@ -130,10 +130,10 @@
   // 文件排除，文件资源管理器根据此设置决定要显示或隐藏的文件和文件夹。
   "files.exclude": {
     "**/.DS_Store": true,
-    "**/.git": false,
+    "**/.git": true,
     "**/.hg": true,
     "**/.idea": true,
-    "**/.svn": false,
+    "**/.svn": true,
     "**/CVS": true,
     "**/Thumbs.db": true
   },

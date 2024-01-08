@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import appLogo from '@/assets/app-logo.jpeg'
 import {useConfigStore} from '@/stores/config'
-
+defineOptions({name: 'LayoutHeader'})
 const configStore = useConfigStore()
 const {themeTag} = storeToRefs(configStore)
 </script>
@@ -10,7 +9,7 @@ const {themeTag} = storeToRefs(configStore)
   <AFlex align="center" justify="space-between" class="h-64px p-10px">
     <ASpace align="center">
       <AFlex align="center" justify="flex-start">
-        <AImage :src="appLogo" :preview="false" class="!h-45px" />
+        <!-- <AImage :preview="false" class="!h-45px" /> -->
       </AFlex>
     </ASpace>
     <ASpace align="center">
