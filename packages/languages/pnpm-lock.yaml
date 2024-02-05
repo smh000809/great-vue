@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   language-translate:
-    specifier: ^2.2.3
-    version: 2.2.3
+    specifier: ^2.2.5
+    version: 2.2.5
 
 packages:
 
@@ -113,6 +113,16 @@ packages:
     resolution: {integrity: sha512-Q28iYCWzNHjAm+yEAot5QaAMxhMghWLFVf7rRdwhUI+c2jix2DUXjAHXVi+s1ibs3mjPO/cCgbA++3BjD0vP/A==}
     dependencies:
       follow-redirects: 1.15.3
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios@1.6.7:
+    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
+    dependencies:
+      follow-redirects: 1.15.5
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -257,6 +267,18 @@ packages:
       mimic-response: 1.0.1
     dev: false
 
+  /deepl-node@1.11.1:
+    resolution: {integrity: sha512-Xdy0sDfqGP40nG++u8IipKD8jxlp6ss4V95pITUIPwMej0bbCngdOSwuVtFSFj7PoemOrjLls4YRZL3refCg1g==}
+    engines: {node: '>=12.0'}
+    dependencies:
+      '@types/node': 20.8.7
+      axios: 1.6.7
+      form-data: 3.0.1
+      loglevel: 1.9.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
     dependencies:
@@ -351,6 +373,25 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dev: false
+
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
+  /form-data@3.0.1:
+    resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
     dev: false
 
   /form-data@4.0.0:
@@ -549,16 +590,17 @@ packages:
       json-buffer: 3.0.0
     dev: false
 
-  /language-translate@2.2.3:
-    resolution: {integrity: sha512-26G+br6y8H+D7KFb9oR8wwtX6cCFcWSHZhNHUCeboRezkLm5itTdKZp3bmGm0Jev1Fyqdg1urP7Sw1x9fVZUUg==}
+  /language-translate@2.2.5:
+    resolution: {integrity: sha512-u8JEYkcO/E7yvKortHcxx/H3rZVXVGNtYG0EW2MeErEySp3JfmRW3nmS1GpRdm0yvTyOiSF/l7GUtAAYi3rdJQ==}
     hasBin: true
     dependencies:
       '@vitalets/google-translate-api': 8.0.0
       axios: 1.5.1
-      chalk: 5.3.0
       commander: 10.0.1
+      deepl-node: 1.11.1
       fast-glob: 3.3.1
       inquirer: 9.2.11
+      prettier: 3.2.5
       tunnel: 0.0.6
       typeof-plus: 1.0.5
       unconfig: 0.3.11
@@ -576,6 +618,11 @@ packages:
     dependencies:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
+    dev: false
+
+  /loglevel@1.9.1:
+    resolution: {integrity: sha512-hP3I3kCrDIMuRwAwHltphhDM1r8i55H33GgqjXbrisuJhF4kRhW1dNuxsRklp4bXl8DSdLaNLuiL4A/LWRfxvg==}
+    engines: {node: '>= 0.6.0'}
     dev: false
 
   /lowercase-keys@1.0.1:
@@ -707,6 +754,12 @@ packages:
   /prepend-http@2.0.0:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
+    dev: false
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: false
 
   /proxy-from-env@1.1.0:
