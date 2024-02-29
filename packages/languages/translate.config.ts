@@ -1,5 +1,5 @@
-import {Lang} from 'language-translate/types'
-import {defineConfig} from 'language-translate/utils'
+import { Lang } from 'language-translate/types'
+import { defineConfig } from 'language-translate/utils'
 
 export default defineConfig({
   proxy: {

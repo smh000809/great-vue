@@ -8,5 +8,5 @@
 </template>
 
 <script lang="ts" setup>
-defineOptions({name: 'AntDesignUserOutlined'})
+defineOptions({ name: 'AntDesignUserOutlined' })
 </script>

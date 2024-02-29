@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: '/404',
       component: () => import('@/views/Error/404.vue'),
-      meta: {title: '404'},
+      meta: { title: '404' },
     },
     {
       path: '/:pathMatch(.*)*',

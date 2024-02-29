@@ -22,7 +22,6 @@ const config = {
   singleQuote: true,
   tabWidth: 2,
   printWidth: 180,
-  bracketSpacing: false,
   useTabs: false,
   arrowParens: 'avoid',
 }

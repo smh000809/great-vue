@@ -1,6 +1,6 @@
 {
   "name": "great-vue",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": true,
   "type": "module",
   "homepage": "https://github.com/smh000809/great-vue",
@@ -79,9 +79,6 @@
     "terser": "^5.28.1",
     "typescript": "~5.3.3",
     "unocss": "^0.58.5",
-    "unplugin-auto-import": "^0.17.5",
-    "unplugin-turbo-console": "^1.4.0",
-    "unplugin-vue-components": "^0.26.0",
     "vite": "^5.1.4",
     "vite-plugin-vue-devtools": "^7.0.15",
     "vitest": "^1.3.1",

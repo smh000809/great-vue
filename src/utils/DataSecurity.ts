@@ -1,7 +1,7 @@
 // 数据加解密方案
 import CryptoJSAES from 'crypto-js/aes'
 import CryptoJSENCUTF8 from 'crypto-js/enc-utf8'
-import type {StateTree} from 'pinia'
+import type { StateTree } from 'pinia'
 
 /**
  * @example 使用示例:

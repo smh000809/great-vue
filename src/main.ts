@@ -1,8 +1,8 @@
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 
-import {createPinia} from 'pinia'
-import {createPersistedState} from 'pinia-plugin-persistedstate'
-import {serializer} from '@/utils/DataSecurity'
+import { createPinia } from 'pinia'
+import { createPersistedState } from 'pinia-plugin-persistedstate'
+import { serializer } from '@/utils/DataSecurity'
 
 import App from '@/App.vue'
 import router from '@/router'
@@ -11,10 +11,9 @@ import '@unocss/reset/eric-meyer.css'
 import 'ant-design-vue/dist/reset.css'
 import '@/styles/global.scss'
 
-import {i18n} from '@/i18n'
+import { i18n } from '@/i18n'
 
-import 'uno.css'
-import 'virtual:unocss-devtools'
+import 'virtual:uno.css'
 
 const pinia = createPinia().use(
   createPersistedState({

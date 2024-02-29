@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "翻译服务",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
     "translate": "node ./index.js && translate"
   },

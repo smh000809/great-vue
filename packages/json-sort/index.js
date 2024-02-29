@@ -1,20 +1,18 @@
 // json 文件排序
-const {log, error} = require('node:console')
-const {readFile, writeFile, readdirSync} = require('node:fs')
-const {resolve} = require('node:path')
-const {exec} = require('node:child_process')
-const {promisify} = require('node:util')
+import { log, error } from 'node:console'
+import { readFile, writeFile, readdirSync } from 'node:fs'
+import { resolve } from 'node:path'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
+
+const rootPath = resolve(import.meta.dirname, '../../')
 
 const $exec = promisify(exec)
 
-const $dirname = resolve(__dirname, '../../')
-
-log(`基于目录：${$dirname}`)
-
 // 读取 JSON 文件并排序，输出到指定目录
-const loadJson = async ({jsonPath, outputPath, fileName, relativePath}) => {
-  const readFilePath = resolve($dirname, jsonPath)
-  const outputFilePath = resolve($dirname, outputPath) || readFilePath.replace(/.json$/, '.sort.json')
+const loadJson = async ({ jsonPath, outputPath, fileName, relativePath }) => {
+  const readFilePath = resolve(rootPath, jsonPath)
+  const outputFilePath = resolve(rootPath, outputPath) || readFilePath.replace(/.json$/, '.sort.json')
   readFile(readFilePath, 'utf8', (err, data) => {
     if (err) {
       error(err)
@@ -51,9 +49,9 @@ const loadJson = async ({jsonPath, outputPath, fileName, relativePath}) => {
 }
 
 const startLoad = async (relativePath = '/src/i18n/modules') => {
-  log(`寻找目录：${relativePath}`)
+  log(`寻找目录：${rootPath + relativePath}`)
   // 获取 src/i18n/modules 目录下的所有文件
-  const languagesFinder = resolve($dirname, `./${relativePath}`)
+  const languagesFinder = resolve(rootPath, `./${relativePath}`)
   const languages = readdirSync(languagesFinder).filter(v => v.endsWith('.json'))
   log(`找到${languages.length}个 JSON 文件`)
   log('开始排序...'.repeat(2))
@@ -76,7 +74,7 @@ const startLoad = async (relativePath = '/src/i18n/modules') => {
       })
     }),
   )
-  const {stdout, stderr} = await $exec('pnpm run format:json')
+  const { stdout, stderr } = await $exec('pnpm run format:json')
   log('*'.repeat(30))
   log('='.repeat(30))
   log('开始格式化...'.repeat(2))

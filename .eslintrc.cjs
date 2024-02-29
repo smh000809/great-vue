@@ -1,19 +1,11 @@
 // @ts-check
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution')
-const {defineConfig} = require('eslint-define-config')
+const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
-  extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting',
-    './src/types/.eslintrc-auto-import.json',
-    './src/types/.eslintrc-globals.json',
-    '@unocss',
-  ],
+  extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-typescript', '@vue/eslint-config-prettier/skip-formatting', '@unocss'],
   parserOptions: {
     ecmaVersion: 'latest',
   },

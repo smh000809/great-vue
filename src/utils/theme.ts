@@ -1,6 +1,7 @@
-import type {ThemeConfig, MappingAlgorithm} from 'ant-design-vue/es/config-provider/context'
-import {theme as ATheme} from 'ant-design-vue'
-import {useConfigStore} from '@/stores/config'
+import { computed } from 'vue'
+import type { ThemeConfig, MappingAlgorithm } from 'ant-design-vue/es/config-provider/context'
+import { theme as ATheme } from 'ant-design-vue'
+import { useConfigStore } from '@/stores/config'
 
 export const dark = (): ThemeConfig => ({
   token: {
@@ -34,9 +35,9 @@ export const theme = computed<ThemeConfig>(() => {
   const configStore = useConfigStore()
   let themeConfig: ThemeConfig = {}
   if (configStore.themeTag === 'dark') {
-    themeConfig = {...themeConfig, ...dark()}
+    themeConfig = { ...themeConfig, ...dark() }
   } else {
-    themeConfig = {...themeConfig, ...light()}
+    themeConfig = { ...themeConfig, ...light() }
   }
   // 紧凑主题
   if (configStore.compact) {

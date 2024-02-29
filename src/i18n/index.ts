@@ -1,5 +1,5 @@
 /** @see https://vue-i18n.intlify.dev/ */
-import {createI18n, type I18nOptions, type I18n} from 'vue-i18n'
+import { createI18n, type I18nOptions, type I18n } from 'vue-i18n'
 
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
 import _zhCN from './modules/zh-CN.json'
@@ -11,8 +11,8 @@ const options: I18nOptions = {
   legacy: false,
   locale: 'zh-CN', // 默认语言
   messages: {
-    'zh-CN': {..._zhCN, antd: zhCN},
-    'en-US': {..._enUS, antd: enUS},
+    'zh-CN': { ..._zhCN, antd: zhCN },
+    'en-US': { ..._enUS, antd: enUS },
   },
 }
 

@@ -1,14 +1,15 @@
-const {writeFileSync, readdirSync, unlinkSync} = require('node:fs')
-const {resolve} = require('node:path')
-const {log} = require('node:console')
-/** 转换项目依赖的 zh-CN 包 */
-// const zhCN = require('../../src/i18n/modules/zh-CN.json')
-/** 仅转换 translate.entry.json  */
-const zhCN = require('./translate.entry.json')
+import { writeFileSync, readFileSync, rmSync, existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+import { log } from 'node:console'
 
-const rootPath = resolve(__dirname, './') // 项目根目录
-const translateEntryJsonPath = `${rootPath}/translate.entry.json`
-const languagesLocalesPath = `${rootPath}/locales`
+// const jsonPath = resolve('../../src/i18n/modules/zh-CN.json')
+const jsonPath = resolve('./translate.entry.json')
+const zhCN = JSON.parse(readFileSync(jsonPath, 'utf-8'))
+
+const translateEntryJsonPath = resolve('./translate.entry.json')
+const languagesLocalesPath = resolve('./locales')
+log(translateEntryJsonPath)
+log(languagesLocalesPath)
 
 let zhCNObj = {
   ...zhCN,
@@ -24,11 +25,8 @@ Object.entries(zhCN).forEach(([key, value]) => {
   zhCNObj[key] = value_
   log('-'.repeat(60))
 })
-
 // 把 zhCN 的 内容复制到 languages/translate.entry.json 中
 writeFileSync(translateEntryJsonPath, JSON.stringify(zhCNObj))
 
 // 删除 ./languages/locales 下所有文件
-readdirSync(languagesLocalesPath).forEach(file => {
-  unlinkSync(`${languagesLocalesPath}/${file}`)
-})
+existsSync(languagesLocalesPath) && rmSync(languagesLocalesPath, { recursive: true })
