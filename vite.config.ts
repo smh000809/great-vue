@@ -66,9 +66,6 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         ],
       },
     },
-    json: {
-      stringify: true,
-    },
     esbuild: {
       pure: ['console.log', 'debugger'],
     },
