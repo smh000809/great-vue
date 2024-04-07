@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 import { createPersistedState } from 'pinia-plugin-persistedstate'
 import { serializer } from '@/utils/DataSecurity'
 
+import Antd from 'ant-design-vue'
 import App from '@/App.vue'
 import router from '@/router'
 import components from '@/components'
@@ -23,10 +24,10 @@ const pinia = createPinia().use(
   }),
 )
 
-const app = createApp(App)
-
-app.use(i18n)
-app.use(components)
-app.use(pinia)
-app.use(router)
-app.mount('#app')
+createApp(App) //
+  .use(Antd)
+  .use(i18n)
+  .use(components)
+  .use(pinia)
+  .use(router)
+  .mount('#app')

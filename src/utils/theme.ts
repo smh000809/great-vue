@@ -1,7 +1,9 @@
 import { computed } from 'vue'
 import type { ThemeConfig, MappingAlgorithm } from 'ant-design-vue/es/config-provider/context'
-import { theme as ATheme } from 'ant-design-vue'
+import { theme as Theme } from 'ant-design-vue'
 import { useConfigStore } from '@/stores/config'
+
+export const ATheme = Theme
 
 export const dark = (): ThemeConfig => ({
   token: {

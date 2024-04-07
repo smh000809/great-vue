@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ConfigProvider, App } from 'ant-design-vue'
+import { App } from 'ant-design-vue'
 import { RouterView } from 'vue-router'
 import { theme } from '@/utils/theme'
 </script>
 
 <template>
-  <ConfigProvider :theme="theme">
+  <AConfigProvider :theme>
     <App>
-      <RouterView></RouterView>
+      <RouterView />
     </App>
-  </ConfigProvider>
+  </AConfigProvider>
 </template>

@@ -39,7 +39,12 @@ export default class DataSecurity {
 export const serializer = () => {
   const useDataSecurity = new DataSecurity()
   return {
-    serialize: (value: StateTree) => useDataSecurity.encryptData(value),
-    deserialize: (value: string) => useDataSecurity.decryptData(value),
+    serialize: (value: StateTree) => {
+      return useDataSecurity.encryptData(value)
+    },
+    deserialize: (value: string) => {
+      console.log(useDataSecurity.decryptData(value))
+      return useDataSecurity.decryptData(value)
+    },
   }
 }
