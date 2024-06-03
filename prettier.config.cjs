@@ -12,12 +12,6 @@ const config = {
       },
     },
     {
-      files: ['./src/utils/RegExp.ts'],
-      options: {
-        printWidth: 1000,
-      },
-    },
-    {
       files: ['./tsconfig.json', './tsconfig.*.json', './src/main.ts', './vite.config.*'],
       options: {
         printWidth: 80,
